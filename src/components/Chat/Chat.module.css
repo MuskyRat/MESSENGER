@@ -1,0 +1,188 @@
+.wrapper {
+  background: #1A1A1A;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .chatHeader {
+  height: 7.32421875%;
+  background: #0F0F0F;
+  padding: 0 27px;
+}
+.wrapper .chatHeader img {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left: 28px;
+  top: 15px;
+}
+.wrapper .chatHeader span {
+  position: absolute;
+  width: 395px;
+  height: 40.86px;
+  left: 91px;
+  top: 16px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #D9D9D9;
+}
+.wrapper .messagesWrapper {
+  height: 85.9375%;
+  width: 100%;
+}
+.wrapper .messagesWrapper .messages {
+  height: 100%;
+  padding: 44px 27px 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.wrapper .messagesWrapper .messages .message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 9px;
+  position: relative;
+}
+.wrapper .messagesWrapper .messages .message .messageContainer {
+  display: flex;
+  align-items: flex-end;
+}
+.wrapper .messagesWrapper .messages .message .messageContainer .messagePhoto {
+  width: 60px;
+  height: 59px;
+}
+.wrapper .messagesWrapper .messages .message .messageContainer .messageBody {
+  width: 469px;
+  padding: 10px 26px 0 16px;
+  position: relative;
+  background: #464646;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.07);
+  border-radius: 9px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 17px;
+}
+.wrapper .messagesWrapper .messages .message .messageContainer .messageBody .userName span {
+  width: 254px;
+  height: 23px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #ECECEC;
+}
+.wrapper .messagesWrapper .messages .message .messageContainer .messageBody .messageContent .messageText {
+  white-space: pre-line;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19.4835px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #ECECEC;
+  padding: 4px 0 4px 0;
+  margin-bottom: 5px;
+}
+.wrapper .messagesWrapper .messages .message .messageContainer .messageBody .messageContent .messageTime {
+  position: absolute;
+  width: 84px;
+  height: 24px;
+  right: 8px;
+  bottom: 5px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19.4835px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #14FF72;
+}
+.wrapper .messagesWrapper .messages .message .messageContainer .messageBody .messageContent .outgoingMessageTime {
+  color: #DFDFDF;
+}
+.wrapper .messagesWrapper .messages .message .messageContainer .outgoingMessageBody {
+  padding-top: 7px;
+  background: rgba(20, 255, 114, 0.7);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.07);
+  border-radius: 9px;
+  display: flex;
+  justify-self: flex-end;
+  margin: 0;
+}
+.wrapper .messagesWrapper .messages .message .outgoingMessageContainer {
+  align-self: flex-end;
+}
+.wrapper .form {
+  margin-top: auto;
+  position: relative;
+  height: 6.73828125vh;
+}
+.wrapper .form .textarea {
+  height: 6.73828125vh;
+  width: 100%;
+  padding: 1.6845703125vh 70px 0 27px;
+  border: none;
+  background: #3A3A3A;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 31px;
+  resize: none;
+  color: #FFFFFF;
+}
+.wrapper .form .textarea:focus {
+  outline: none;
+}
+.wrapper .form .placeholder {
+  position: absolute;
+  top: 50%;
+  left: 1.875%;
+  transform: translateY(-50%);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  color: #D1D1D1;
+  transition: 0.4s;
+  pointer-events: none;
+}
+.wrapper .form .textarea:focus ~ .placeholder {
+  display: none;
+}
+.wrapper .form .button {
+  position: absolute;
+  top: 50%;
+  right: 1.875%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  border: none;
+  line-height: 0;
+  background: #3A3A3A;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Chat.module.css.map */

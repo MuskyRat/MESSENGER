@@ -1,0 +1,298 @@
+// document background color
+
+$wrapperBackground: #1A1A1A;
+
+// header background color
+
+$headerBackground: #0F0F0F;
+
+// textarea background color
+
+$textareaBackground: #3A3A3A;
+
+// incoming messages background color
+
+$incomingBackground: #464646;
+
+//incoming message font color
+
+$incomingColor: #ECECEC;
+
+// outgoing messages background color
+
+$outgoingBackground: #14FF72B2;
+
+//header font color
+
+$headerFontColor: #D9D9D9;
+
+//incoming time font color
+
+$incomingTimeFontColor: #14FF72;
+
+//outgoing time font color
+
+$outgoingTimeFontColor: #DFDFDF;
+
+//textarea font color
+
+$textareaFontColor: #FFFFFF;
+
+//placeholder font color
+
+$placeholderFontColor: #D1D1D1;
+
+
+//Компонент Chat
+
+.wrapper {
+  background: $wrapperBackground;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  //Компонент ChatHeader
+
+  .chatHeader {
+    height: 7.32421875%;
+    background: $headerBackground;
+    padding: 0 27px;
+
+    & img {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 28px;
+      top: 15px;
+    }
+
+    & span {
+      position: absolute;
+      width: 395px;
+      height: 40.86px;
+      left: 91px;
+      top: 16px;
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 31px;
+      display: flex;
+      align-items: center;
+      color: $headerFontColor;
+    }
+  }
+
+  // Компонент Messages
+
+  .messagesWrapper {
+    height: 85.9375%;
+    width: 100%;
+
+    .messages {
+      height: 100%;
+      padding: 44px 27px 0;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      box-sizing: border-box;
+
+
+      // Компонент Message
+
+      .message {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 9px;
+        position: relative;
+
+        .messageContainer {
+          display: flex;
+          align-items: flex-end;
+
+          .messagePhoto {
+            width: 60px;
+            height: 59px;
+
+          }
+
+          .messageBody {
+            width: 469px;
+            padding: 10px 26px 0 16px;
+            position: relative;
+            background: $incomingBackground;
+
+            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.07);
+            border-radius: 9px;
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 17px;
+
+            .userName {
+
+              & span {
+                width: 254px;
+                height: 23px;
+
+                font-family: Inter, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+
+                color: $incomingColor;
+
+              }
+            }
+
+            .messageContent {
+
+              .messageText {
+
+                white-space: pre-line;
+
+                font-family: Inter, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 19.4835px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+
+                color: $incomingColor;
+
+                padding: 4px 0 4px 0;
+                margin-bottom: 5px;
+
+              }
+
+              .messageTime {
+
+                position: absolute;
+                width: 84px;
+                height: 24px;
+                right: 8px;
+                bottom: 5px;
+
+                font-family: Inter, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 19.4835px;
+                line-height: 24px;
+
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                color: $incomingTimeFontColor;
+
+              }
+
+              .outgoingMessageTime {
+                color: $outgoingTimeFontColor;
+              }
+
+            }
+          }
+
+          .outgoingMessageBody {
+
+            padding-top: 7px;
+            background: rgba(20, 255, 114, 0.7);
+            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.07);
+            border-radius: 9px;
+            display: flex;
+            justify-self: flex-end;
+            margin: 0;
+
+          }
+
+        }
+
+        .outgoingMessageContainer {
+          align-self: flex-end;
+        }
+
+      }
+
+    }
+  }
+
+  // Компонент AddChatMessageForm
+
+  .form {
+    margin-top: auto;
+    position: relative;
+    height: 6.73828125vh;
+
+    .textarea {
+      height: 6.73828125vh;
+      width: 100%;
+      padding: 6.73828125vh*0.25 70px 0 27px;
+      border: none;
+      background: $textareaBackground;
+      box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 26px;
+      line-height: 31px;
+      resize: none;
+
+      color: $textareaFontColor;
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+    .placeholder {
+
+      position: absolute;
+      top: 50%;
+      left: 1.875%;
+      transform: translateY(-50%);
+
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 31px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+
+      color: $placeholderFontColor;
+      transition: .4s;
+      pointer-events: none;
+
+    }
+
+    .textarea:focus ~ .placeholder {
+      display: none;
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      right: 1.875%;
+      transform: translateY(-50%);
+      padding: 0;
+      margin: 0;
+      border: none;
+      line-height: 0;
+      background: $textareaBackground;
+      cursor: pointer;
+    }
+  }
+}
+
